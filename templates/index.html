@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body %}
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<html>
+<head>
+     <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col">
+            <div class="card">
+                <div class="row card-body">
+                   <div class="col">
+                    <h1 class="display-2 mb-4">Exam Security.<br class="d-none d-md-inline"> Done Right.</h1>
+                    <h3 class="display-4 mb-4">Deter. Detect. Prevent.</h3>
+                    <p class="lead mb-4 text-muted">Online proctoring to advance your learning and testing program. Validate knowledge. Reduce costs. Expand access.</p>
+                    </div>
+                    <div class="col text-right">
+                        <img src="{{ url_for('static', filename='myproctoraiindex.gif') }}"/>
+                    </div>
+                                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+{% endblock %}

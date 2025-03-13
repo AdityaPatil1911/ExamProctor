@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ExamProctor</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='assets/img/favicon/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/img/favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16"  href="{{ url_for('static', filename='assets/img/favicon/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='assets/img/favicon/site.webmanifest') }}">
+<link rel="mask-icon" color="#ffffff"  href="{{ url_for('static', filename='static/assets/img/favicon/safari-pinned-tab.svg') }}">
+<link ref="stylesheet" type="text/css" href="{{ url_for('static', filename='snackbar.min.css') }}"/> 
+<script src="{{ url_for('static', filename='snackbar.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<!-- Fontawesome -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='vendor/@fortawesome/fontawesome-free/css/all.min.css') }}">
+
+<!-- Pixel CSS -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/pixel.css') }}">
+
+<!-- Snackbar CSS -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='mysnackbarcss.css') }}">
+
+
+<!-- alert css -->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+  /* Additional CSS for video styling */
+  #video-container {
+    position: fixed; /* Keep the video in the corner */
+    bottom: 10px;    /* Distance from the bottom */
+    right: 10px;     /* Distance from the right */
+    width: 200px;    /* Set width */
+    height: 150px;   /* Set height */
+    border: 2px solid black; /* Optional: border for the video */
+    background: black; /* Optional: background color */
+    z-index: 1000;   /* Ensure it appears above other elements */
+  }
+
+  /* Hide the video element */
+  #video {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+  }
+
+  /* CSS for alert box */
+  #suspicious-alert {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position based on element's size */
+    z-index: 2000; /* Ensure it appears above other elements */
+    background-color: red; /* Alert background color */
+    color: white; /* Alert text color */
+    padding: 20px 30px; /* Adjust padding for better spacing */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Optional shadow */
+    text-align: center; /* Center text inside the alert box */
+    width: auto; /* Set fixed width for the alert */
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 18px; /* Increase font size for readability */
+  }
+</style>
+
+<script src="{{ url_for('static', filename='volt/vendor/sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
+
+    {% block head %}{% endblock %}
+
+  </head>
+
+  <body>
+
+      <div id="snackbar">Don't try to open new window or any other applications. We are Monitoring you!</div>
+      
+      {% block body %}{% endblock %}
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Core -->
+<script src="{{ url_for('static', filename='vendor/popper.js/dist/umd/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/headroom.js/dist/headroom.min.js') }}"></script>
+
+<!-- Vendor JS -->
+<script src="{{ url_for('static', filename='vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/nouislider/distribute/nouislider.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jarallax/dist/jarallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery.counterup/jquery.counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery-countdown/dist/jquery.countdown.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/prismjs/prism.js') }}"></script>
+
+<!-- pixel JS -->
+<script src="{{ url_for('static', filename='assets/js/pixel.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
